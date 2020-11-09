@@ -15,7 +15,6 @@ const CartDropdown = ({ cartItems, history, toggleCartHidden }) => {
       <div className="cart-items">
         {cartItems.length ? (
           cartItems.map((cartItem) => {
-            console.log(cartItem);
             return <CartItem key={cartItem.id} item={cartItem} />;
           })
         ) : (

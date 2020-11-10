@@ -4,6 +4,7 @@ const buttonStyles = css`
   background-color: black;
   color: white;
   border: none;
+
   &:hover {
     background-color: white;
     color: black;
@@ -11,18 +12,19 @@ const buttonStyles = css`
   }
 `;
 
-export const invertedButtonStyles = css`
+const invertedButtonStyles = css`
   background-color: white;
   color: black;
+  border: 1px solid black;
 
   &:hover {
     background-color: black;
-    border: none;
     color: white;
+    border: none;
   }
 `;
 
-export const googleSignInStyles = css`
+const googleSignInStyles = css`
   background-color: #4285f4;
   color: white;
 

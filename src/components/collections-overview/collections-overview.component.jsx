@@ -5,12 +5,19 @@ import { selectCollectionsForPreview } from "../../redux/shop/shop.selectors";
 import CollectionPreview from "../collection-preview/collection-preview.component";
 import { CollectionsOverviewContainer } from "./collections-overview.styles";
 
-const CollectionsOverview = ({ collections }) => {
+const CollectionsOverview = (props) => {
   return (
     <CollectionsOverviewContainer>
-      {collections.map(({ id, ...otherCollectionProps }) => (
-        <CollectionPreview key={id} {...otherCollectionProps} />
-      ))}
+      {props.collections.map(({ id, ...otherCollectionProps }) => {
+        return (
+          <CollectionPreview
+            key={id}
+            {...otherCollectionProps}
+            history={props.history}
+            match={props.match}
+          />
+        );
+      })}
     </CollectionsOverviewContainer>
   );
 };

@@ -20,7 +20,7 @@ export const selectCollection = (collectionUrlParam) => {
   );
 };
 
-export const selectCollectionFetching = createSelector(
+export const selectIsCollectionFetching = createSelector(
   [selectShop],
   (shop) => shop.isFetching
 );

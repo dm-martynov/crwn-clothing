@@ -29,7 +29,7 @@ class SignIn extends React.Component {
 
     const { emailSignInStart } = this.props;
     const { email, password } = this.state;
-    debugger;
+
     emailSignInStart({ email, password });
   };
 
